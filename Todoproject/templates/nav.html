@@ -1,0 +1,69 @@
+{% load static %}
+
+<div class="main">
+  <div class="container-fluid firstcontainer">
+    <div class="row A">
+      <div class="col-2 aa">
+        <div class="row aaa1 position-fixed">
+          <div class="col-10 aaa1a m-1 pt-2  rounded-2 ">
+            <div class="ss fs-5 pb-2 "> <a class="text-white text-decoration-none" href="{% url 'home' %}"><img
+                  src="../static/image/spo.png" width="28px" alt="">
+                Spotify</a>
+            </div>
+            <div class=" ss2_home fs-5 pb-2"><svg xmlns="http://www.w3.org/2000/svg" class="mtt" height="24"
+                viewBox="0 -960 960 960" width="24">
+                <path
+                  d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"
+                  fill="white" />
+              </svg>Home</div>
+            <div class="ss2  fs-5 pb-2 mt-2"><svg xmlns="http://www.w3.org/2000/svg" class="mtt1" height="24"
+                viewBox="0 -960 960 960" width="24">
+                <path
+                  d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"
+                  fill="white" />
+              </svg>
+              Search</div>
+          </div>
+          
+          <a href="{% url 'form' %}"
+            class="col-10 aaa1b mx-1 mb-1 text-decoration-none flex-end rounded-2 text-white"><svg
+              xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="26">
+              <path fill="white"
+                d="M358.386-424.616h196.921v-45.383H358.386v45.383Zm0-98.077h353.843v-45.384H358.386v45.384Zm0-98.078h353.843v-45.383H358.386v45.383Zm-79.923 390q-23.529 0-40.611-17.082-17.081-17.082-17.081-40.611v-513.842q0-23.529 17.081-40.611 17.082-17.082 40.611-17.082h513.843q23.528 0 40.61 17.082t17.082 40.611v513.842q0 23.529-17.082 40.611-17.082 17.082-40.61 17.082H278.463Zm0-45.384h513.843q4.615 0 8.462-3.846 3.846-3.847 3.846-8.463v-513.842q0-4.616-3.846-8.463-3.847-3.846-8.462-3.846H278.463q-4.616 0-8.462 3.846-3.847 3.847-3.847 8.463v513.842q0 4.616 3.847 8.463 3.846 3.846 8.462 3.846ZM167.694-120.003q-23.528 0-40.61-17.082-17.082-17.081-17.082-40.61v-559.226h45.384v559.226q0 4.616 3.846 8.462 3.847 3.847 8.462 3.847h559.227v45.383H167.694Zm98.46-694.612V-276.155-814.615Z" />
+            </svg>&nbsp;Add Songs here&nbsp;+</a>
+        </div>
+      </div>
+      <div class="col-10 bb ">
+        <div class="row bb1 ">
+          <div class="col-12 bb1c px-0 ms-0 me-0  mt-1 mt-md-0 ">
+            <nav class="navbar  navbar-expand-lg navbar-light px-0  ">
+              <!-- Button to toggle the navbar on smaller screens -->
+              <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse  rounded-top navbar-collapse mt-md-0 mt-2" id="navbarNav">
+                <ul class="navbar-nav  pt-1  fw-bold  pb-2 ms-auto ">
+
+                  {% if user.is_authenticated %}
+                  <span>{{user}}</span>
+                  <li class="nav-item ">
+                    <a class="nav-link nav-signup btn mb-lg-0 mb-2" href="{% url 'auth:logout' %}"><b>Logout</b></a>
+                  </li>
+
+                  {% else %}
+                  <li class="nav-item ">
+                    <a class="nav-link nav-signup btn mb-lg-0 mb-2" href="{% url 'auth:register' %}"><b>Sign up</b></a>
+                  </li>
+                  <li class="nav-item ">
+                    <a class=" nav-bttn btn px-3 py-2 rounded-pill btn-outline-dark mx-lg-3 mx-0 "
+                      href="{% url 'auth:login' %}"><b>Log
+                        in</b></a>
+                  </li>
+                  {% endif %}
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>

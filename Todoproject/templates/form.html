@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container ">
+    <form class="border rounded-1 mt-5 w-75 mx-auto mb-2" method="post" action="" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="text-center py-3 ">
+            <h3>ADD SONGS HERE</h3>
+        </div>
+        <span class="ps-5 ms-5 "></span>
+        <input class="form-control w-75 mx-auto mb-2" type="text" name="name" placeholder="Song name">
+        <span class="ps-5 ms-5"></span>
+        <input class="form-control w-75 mx-auto  mb-2" type="text" name="language" placeholder="Language">
+        <span class="ps-5 ms-5"></span>
+        <input class="form-control w-75 mx-auto  mb-2" type="text" name="duration" placeholder="Duration">
+        <span class="ps-5 ms-5"></span>
+        <input class="form-control w-75 mx-auto  mb-2" type="file" name="image" placeholder="SongPoster">
+        <span class="ps-5 ms-5"></span>
+        <input class="form-control w-75 mx-auto  mb-2" type="text" name="description" placeholder="song Description">
+
+        <button class="btn btn-success my-3  add_button " style="margin-left: 450px;">ADD</button>
+    </form>
+
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container-fluid ps-0 pe-1 mm-details">
+    <div class="card-slot row coolor rounded-bottom   py-5 ">
+        <div class=" col-6  col-md-2 cardsss ">
+            <img class="card-img-top rounded-3" src="{{ music.image.url }}" alt="Card image cap">
+        </div>
+        <div class="col ps-2 pt-2 ms-5 mt-5 ">
+            <div class="row text-light ps-3">
+
+                <h6 class="ps-2  m-0">Playlist</h6>
+                <h1 class="namedetail p-0 m-0  ">{{ music.name }}</h1>
+            </div>
+            <div class="row  mt-3 ps-2">
+                <h6 class="text-light music-descrition">{{music.description}}</h6>
+            </div>
+            <div class="row ps-2">
+                <div class="col mt-2 text-light">
+                    <h6 class="m-0 p-0 detailsimage">Spotify • 5,186,533 likes • 750 songs, over {{music.duration}}</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

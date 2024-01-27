@@ -1,0 +1,85 @@
+.card {
+    display: grid !important;
+    color: white !important;
+    overflow-x: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    background-color: rgb(12, 12, 12) !important;
+    width: 13rem !important;
+    border-radius: 0.3rem !important;
+    padding: 1rem !important;
+    position: relative !important;
+    transition: all 0.4s !important;
+    cursor: pointer !important;
+
+}
+
+.img_holder>a>img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 0.3rem !important;
+
+}
+
+.Song_Name {
+    margin-top: 1rem !important;
+    line-height: 1 !important;
+}
+
+.Song_Name h4 {
+    font-size: 1.2rem !important;
+}
+
+.Song_Name p {
+    font-size: 0.9rem !important;
+    margin-top: 0.5rem !important;
+    font-weight: 500 !important;
+    color: gray !important;
+}
+
+.play-icon {
+    position: absolute !important;
+    top: 45% !important;
+    right: 12% !important;
+    transform: translateY(10px) !important;
+    filter: drop-shadow(0 0.5rem 1rem rgb(0, 0, 0, 0.4)) !important;
+    opacity: 0 !important;
+    transition: all 0.4s;
+}
+
+.card:hover .play-icon {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.circle {
+    width: 3.5rem !important;
+    height: 3.5rem !important;
+    border-radius: 50% !important;
+    background-color: chartreuse !important;
+    transform: scale(0.95) !important;
+    display: grid !important;
+    place-items: center !important;
+
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 18px solid black;
+    transform: rotate(90deg);
+    margin-left: 0.2rem;
+}
+
+.play-icon:hover .circle {
+    cursor: auto;
+    transform: scale(1);
+}
+
+.card_holder {
+    margin: 1px !important;
+}

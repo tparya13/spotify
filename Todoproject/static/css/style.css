@@ -1,0 +1,28 @@
+body {
+    overflow-x: hidden;
+
+}
+
+.add_button {
+    margin-left: 100px !important;
+}
+
+.card-img-top {
+    width: 202px !important;
+    height: 202px !important;
+
+}
+
+.coolor {
+    background: linear-gradient(0deg, rgba(58, 161, 167, 1) 1%, rgba(53, 144, 149, 1) 13%, rgba(30, 103, 107, 1) 37%, rgba(65, 54, 31, 1) 95%) !important;
+    height: 100% !important;
+}
+
+.mm-details {
+    height: 90vh !important;
+}
+
+.login_page {
+    height: 230px !important;
+    width: 400px !important;
+}
